@@ -1,11 +1,8 @@
-import { Box, Button, Flex } from "@radix-ui/themes";
-import { TextInput } from "@/shared/ui/TextInput/TextInput";
-import { useState } from "react";
+import { Box, Flex } from "@radix-ui/themes";
 import { Rss } from "lucide-react";
+import { LoginForm } from "@/app/(auth)/login/_components/LoginForm";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
-
   return (
     <Flex justify={"center"} align={"center"} className={"min-h-screen"}>
       <Flex direction={"column"} justify={"center"} align={"center"} gap={"8"}>
@@ -34,22 +31,7 @@ export default function LoginPage() {
             "login-box mb-16 bg-surface-tertiary border border-border-tertiary rounded-[20px]"
           }
         >
-          <Flex direction={"column"} gap={"6"} className={"p-1"}>
-            <TextInput
-              size={"7"}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              label={"이메일 주소를 입력해주세요."}
-            />
-            <Button
-              size={"4"}
-              color={"gray"}
-              highContrast
-              className={"custom custom-size-7"}
-            >
-              로그인 하기
-            </Button>
-          </Flex>
+          <LoginForm />
         </Box>
       </Flex>
     </Flex>

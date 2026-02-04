@@ -1,4 +1,4 @@
-import { SegmentedControl, Text } from "@radix-ui/themes";
+import { SegmentedControl } from "@radix-ui/themes";
 import clsx from "clsx";
 import type { ExchangeMode } from "@/shared/schemes/types";
 

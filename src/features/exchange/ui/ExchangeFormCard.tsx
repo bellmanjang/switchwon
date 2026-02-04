@@ -1,11 +1,14 @@
-import { Box, Button, Flex, Separator, Text } from "@radix-ui/themes";
+"use client";
+
+import { Box, Button, Flex, Separator } from "@radix-ui/themes";
 import { type ExchangeMode } from "@/shared/schemes/types";
 import { CurrencyDropdown } from "@/features/exchange/ui/CurrencyDropdown";
 import { ModeSegmentedControl } from "@/features/exchange/ui/ModeSegmentedControl";
 import { useState } from "react";
-import { TextInput } from "@/shared/ui/TextInput/TextInput";
+import { TextInput } from "@/shared/ui/input/TextInput";
 import { formatNumberToString } from "@/shared/utils/format-util";
 import { ChevronDown } from "lucide-react";
+import clsx from "clsx";
 
 export function ExchangeFormCard() {
   const [mode, setMode] = useState<ExchangeMode>("BUY");
@@ -74,11 +77,10 @@ export function ExchangeFormCard() {
                     maximumFractionDigits: 3,
                   })}{" "}
                   <span
-                    style={{
-                      marginLeft: "2px",
-                      color: mode === "BUY" ? "var(--red-9)" : "var(--blue-9)",
-                      fontWeight: "600",
-                    }}
+                    className={clsx(
+                      "ml-1",
+                      mode === "BUY" ? "text-buy" : "text-sell",
+                    )}
                   >
                     원 {mode === "BUY" ? "필요해요" : "받을 수 있어요"}
                   </span>

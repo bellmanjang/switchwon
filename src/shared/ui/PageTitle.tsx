@@ -7,16 +7,9 @@ type PageTitleProps = {
 
 export const PageTitle = ({ title, subtitle }: PageTitleProps) => {
   return (
-    <Flex
-      direction={"column"}
-      gap={"2"}
-    >
-      <h1 className={"font-bold text-text-primary"}>
-        {title}
-      </h1>
-      <Text className={"page-subtitle text-text-secondary"}>
-        {subtitle}
-      </Text>
+    <Flex direction={"column"} gap={"2"}>
+      <h1 className={"font-bold text-text-primary"}>{title}</h1>
+      <Text className={"page-subtitle text-text-secondary"}>{subtitle}</Text>
     </Flex>
   );
 };

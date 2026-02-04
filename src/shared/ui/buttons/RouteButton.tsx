@@ -1,14 +1,17 @@
-import { Button, Text } from "@radix-ui/themes";
+"use client";
+
+import { Button } from "@radix-ui/themes";
 import type { PropsWithChildren } from "react";
-import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 type RouteButtonProps = PropsWithChildren & {
   path: string;
 };
 
 export const RouteButton = ({ children, path }: RouteButtonProps) => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <Button
@@ -17,11 +20,11 @@ export const RouteButton = ({ children, path }: RouteButtonProps) => {
       color={"gray"}
       className={"!shadow-none font-semibold"}
     >
-      <Link to={path}>
+      <Link href={path}>
         <h4
           className={clsx(
             "font-bold",
-            location.pathname === path ? "text-cta-hover" : "text-[#8899AA]",
+            pathname === path ? "text-cta-hover" : "text-[#8899AA]",
           )}
         >
           {children}

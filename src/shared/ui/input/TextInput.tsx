@@ -1,4 +1,4 @@
-import { Box, Text, Flex, TextField } from "@radix-ui/themes";
+import { Box, Flex, TextField } from "@radix-ui/themes";
 import React, { type ChangeEvent, type FocusEvent } from "react";
 import clsx from "clsx";
 
@@ -38,7 +38,6 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
     ref,
   ) => {
     const inputSize = size === "1" || size === "2" || size === "3" ? size : "3";
-    const labelSize = Number(size) > 5 ? "5" : size;
 
     return (
       <Box>

@@ -1,7 +1,7 @@
-import type { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import { Theme } from "@radix-ui/themes";
 
-export function AppProviders({ children }: PropsWithChildren) {
+export const ThemeProvider = ({ children }: PropsWithChildren) => {
   return (
     <Theme
       className={"h-full"}
@@ -13,4 +13,4 @@ export function AppProviders({ children }: PropsWithChildren) {
       {children}
     </Theme>
   );
-}
+};

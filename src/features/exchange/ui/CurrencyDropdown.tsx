@@ -1,3 +1,5 @@
+"use client";
+
 import { DropdownMenu, Text } from "@radix-ui/themes";
 import { CurrencyFlagIcon } from "@/features/exchange/ui/CurrencyFlagIcon";
 import { CURRENCY_META } from "@/shared/schemes/types";

@@ -4,7 +4,7 @@ import { ExchangeFormCard } from "@/features/exchange/ui/ExchangeFormCard";
 import { PageTitle } from "@/shared/ui/PageTitle";
 import { Flex } from "@radix-ui/themes";
 
-export default function ExchangePagePage() {
+export default function ExchangePage() {
   return (
     <Flex direction={"column"} gap={"5"} className={"page-wrapper w-full"}>
       <PageTitle
