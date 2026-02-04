@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import "@radix-ui/themes/styles.css";
+
+:root {
+    color-scheme: light;
+
+    --default-font-family: "Pretendard", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+    --color-text-primary: rgb(40, 50, 60); /* Gray 800 */
+    --color-text-secondary: rgb(55, 69, 83); /* Gray 700 */
+    --color-text-tertiary: rgb(100, 111, 124); /* Gray 600 */
+    --color-border-primary: rgb(55, 69, 83); /* Gray 700 */
+    --color-border-secondary: rgb(172, 180, 187); /* Gray 500 */
+    --color-border-tertiary: rgb(208, 214, 219); /* Gray 300 */
+    --color-surface-secondary: rgb(241, 242, 244); /* Gray 100 카드/패널 */
+    --color-surface-tertiary: rgb(247, 248, 249); /* Gray 0 카드/패널 */
+    --color-divider: rgb(197, 200, 206); /* Gray 400 */
+    /* CTA */
+    --color-cta: rgb(27, 35, 52); /* CTA 1/Default (Black) */
+    --color-cta-hover: rgb(54, 65, 76); /* CTA 1/Hover */
+    --color-cta-pressed: rgb(54, 65, 76); /* CTA 1/Pressed */
+    /* Buy / Sell */
+    --color-buy: rgb(254, 80, 80); /* Buy - Primary (Red) */
+    --color-buy-disabled: rgb(255, 167, 167); /* Buy - Disabled (Red) */
+    --color-sell: rgb(59, 110, 255); /* Sell - Primary (Blue) */
+    --color-sell-disabled: rgb(157, 182, 255); /* Sell - Disabled (Blue) */
+    --color-exchange-icon-bg: rgb(208, 214, 219); /* Gray 300 */
+}
+
+.radix-themes {
+    --default-font-family: "Pretendard", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    sans-serif;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100dvh;
+}
+
+.exchange-mode-seg .rt-SegmentedControlItem[data-state="on"] {
+    color: white;
+}
+
+.exchange-mode-seg .rt-SegmentedControlItem[data-state="off"]:hover {
+    background-color: var(--gray-a4);
+}
+
+.exchange-mode-seg .rt-SegmentedControlIndicator::before {
+    border-radius: 8px !important;
+}
+
+.seg-buy-item .rt-SegmentedControlItemLabelInactive {
+    color: var(--red-9);
+}
+
+.seg-sell-item .rt-SegmentedControlItemLabelInactive {
+    color: var(--blue-9);
+}
+
+.seg-buy .rt-SegmentedControlIndicator::before {
+    margin: 8px 0 8px 8px;
+    background-color: var(--red-9);
+}
+
+.seg-sell .rt-SegmentedControlIndicator::before {
+    margin: 8px 8px 8px 0;
+    background-color: var(--blue-9);
+}
+
+.rt-TextFieldRoot.custom {
+    &.custom-size-4 {
+        height: 48px !important;
+    }
+
+    &.custom-size-5 {
+        height: 56px !important;
+    }
+}
+
+.rt-TextFieldRoot.align-right > input {
+    text-align: right !important;
+}
+
+.rt-Button.custom {
+    &.custom-size-5 {
+        height: 56px !important;
+    }
+}
