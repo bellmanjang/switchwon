@@ -3,6 +3,8 @@ import LoginPage from "@/pages/Login";
 import ExchangePage from "@/pages/Exchange";
 import OrdersPage from "@/pages/Orders";
 import { RequireAuth } from "@/features/auth/RequireAuth";
+import NotFoundPage from "@/pages/NotFound";
+import { Layout } from "@/app/layouts/Layout";
 
 export function AppRouter() {
   return (
@@ -11,21 +13,17 @@ export function AppRouter() {
       <Route path="/login" element={<LoginPage />} />
 
       <Route
-        path="/exchange"
         element={
           <RequireAuth>
-            <ExchangePage />
+            <Layout />
           </RequireAuth>
         }
-      />
-      <Route
-        path="/orders"
-        element={
-          <RequireAuth>
-            <OrdersPage />
-          </RequireAuth>
-        }
-      />
+      >
+        <Route path="/exchange" element={<ExchangePage />} />
+        <Route path="/orders" element={<OrdersPage />} />
+      </Route>
+
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

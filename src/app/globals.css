@@ -40,6 +40,8 @@
     --default-font-family: "Pretendard", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
     sans-serif;
+
+    --cursor-button: pointer;
 }
 
 html,
@@ -47,6 +49,223 @@ body,
 #root {
     width: 100%;
     height: 100dvh;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+
+    @media screen and (max-width: 767px) {
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    font-size: 32px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 28px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 22px;
+    }
+}
+
+h4 {
+    font-size: 20px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 18px;
+    }
+}
+
+p {
+    font-size: 16px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 14px;
+    }
+}
+
+.login-page-logo {
+    width: 64px;
+    height: 64px;
+
+    @media screen and (max-width: 767px) {
+        width: 32px;
+        height: 32px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.login-box {
+    width: 560px;
+    padding: 24px 32px;
+
+    @media screen and (max-width: 767px) {
+        width: 280px;
+        padding: 12px 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 420px;
+        padding: 18px 24px;
+    }
+}
+
+.header {
+    height: 72px;
+    padding: 16px 40px;
+
+    @media screen and (max-width: 767px) {
+        height: 56px;
+        padding: 8px 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 64px;
+        padding: 12px 30px;
+    }
+}
+
+.header-logo {
+    width: 24px;
+    height: 24px;
+
+    @media screen and (max-width: 767px) {
+        width: 16px;
+        height: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.header-title {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.page-wrapper {
+    padding: 40px 80px 50px 80px;
+
+    @media screen and (max-width: 767px) {
+        padding: 8px 20px 10px 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 12px 30px 15px 30px;
+    }
+}
+
+.page-subtitle {
+    font-size: 20px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 16px;
+    }
+}
+
+.exchange-page-content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+            ". . exchange exchange"
+            "wallet wallet exchange exchange";
+    gap: 24px;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            ". ."
+            "wallet wallet"
+            "exchange exchange";
+        gap: 8px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        gap: 16px;
+    }
+}
+
+.card {
+    padding: 24px 32px;
+
+    @media screen and (max-width: 767px) {
+        padding: 12px 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 18px 24px;
+    }
+}
+
+.rate-change-icon {
+    scale: 2.0;
+
+    @media screen and (max-width: 767px) {
+        scale: 1.5;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        scale: 1.75;
+    }
+}
+
+.exchange-mode-seg {
+    gap: 4px;
+    padding: 8px;
+    border-radius: 12px;
+    background: white;
+
+    height: 80px;
+
+    @media screen and (max-width: 767px) {
+        height: 56px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 68px;
+    }
 }
 
 .exchange-mode-seg .rt-SegmentedControlItem[data-state="on"] {
@@ -54,47 +273,281 @@ body,
 }
 
 .exchange-mode-seg .rt-SegmentedControlItem[data-state="off"]:hover {
-    background-color: var(--gray-a4);
+    background-color: var(--color-surface-tertiary);
 }
 
 .exchange-mode-seg .rt-SegmentedControlIndicator::before {
-    border-radius: 8px !important;
+    border-radius: 8px;
 }
 
 .seg-buy-item .rt-SegmentedControlItemLabelInactive {
-    color: var(--red-9);
+    color: var(--color-buy-disabled);
 }
 
 .seg-sell-item .rt-SegmentedControlItemLabelInactive {
-    color: var(--blue-9);
+    color: var(--color-sell-disabled);
 }
 
 .seg-buy .rt-SegmentedControlIndicator::before {
-    margin: 8px 0 8px 8px;
-    background-color: var(--red-9);
+    margin: 8px 4px 8px 8px;
+    background-color: var(--color-buy);
 }
 
 .seg-sell .rt-SegmentedControlIndicator::before {
-    margin: 8px 8px 8px 0;
-    background-color: var(--blue-9);
+    margin: 8px 8px 8px 4px;
+    background-color: var(--color-sell);
+}
+
+.exchange-button-text {
+    font-size: 22px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 20px;
+    }
 }
 
 .rt-TextFieldRoot.custom {
+    background: white;
+
     &.custom-size-4 {
-        height: 48px !important;
+        height: 48px;
+
+        @media screen and (max-width: 767px) {
+            height: 36px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 42px;
+        }
+
+        & > input {
+            font-size: 16px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 12px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 14px;
+            }
+        }
     }
 
     &.custom-size-5 {
-        height: 56px !important;
+        height: 56px;
+
+        @media screen and (max-width: 767px) {
+            height: 40px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 48px;
+        }
+
+        & > input {
+            font-size: 20px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &.custom-size-6 {
+        height: 64px;
+
+        @media screen and (max-width: 767px) {
+            height: 44px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 54px;
+        }
+
+        & > input {
+            font-size: 20px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &.custom-size-7 {
+        height: 72px;
+
+        @media screen and (max-width: 767px) {
+            height: 48px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 60px;
+        }
+
+        & > input {
+            font-size: 20px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    & > input {
+        color: var(--color-text-tertiary);
+        font-weight: 600; /* semi-bold */
+
+        &::placeholder {
+            color: var(--color-text-tertiary);
+        }
     }
 }
 
 .rt-TextFieldRoot.align-right > input {
-    text-align: right !important;
+    text-align: right;
 }
 
 .rt-Button.custom {
     &.custom-size-5 {
-        height: 56px !important;
+        height: 56px;
+
+        @media screen and (max-width: 767px) {
+            height: 40px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 48px;
+        }
+    }
+
+    &.custom-size-6 {
+        height: 64px;
+
+        @media screen and (max-width: 767px) {
+            height: 44px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 54px;
+        }
+    }
+
+    &.custom-size-7 {
+        height: 72px;
+
+        @media screen and (max-width: 767px) {
+            height: 48px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 60px;
+        }
+    }
+}
+
+.currency-dropdown-content .rt-DropdownMenuViewport {
+    padding: 8px 0;
+}
+
+.currency-dropdown-item {
+    width: 140px;
+    height: 44px;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+
+.currency-dropdown-item[data-highlighted] {
+    background-color: var(--color-surface-tertiary);
+}
+
+.orders-history {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--color-border-tertiary);
+
+    & .rt-TableRootTable {
+        font-size: 14px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 13px;
+        }
+
+        & > .rt-TableHeader {
+            --table-row-background-color: white;
+
+            & > .rt-TableRow {
+                & > th {
+                    color: var(--color-text-tertiary);
+                    font-weight: 400;
+                    word-break: keep-all;
+                }
+
+                & > th:first-of-type {
+                    padding-left: 24px;
+                }
+
+                & > th:last-of-type {
+                    padding-right: 24px;
+                }
+
+                & > th:nth-child(3) {
+                    text-align: right;
+                }
+
+                & > th:nth-child(4) {
+                    text-align: right;
+                }
+
+                & > th:nth-child(5) {
+                    text-align: right;
+                }
+            }
+        }
+
+        & > .rt-TableBody {
+            & > .rt-TableRow {
+                color: var(--color-text-secondary);
+
+                & > th:first-of-type {
+                    padding-left: 24px;
+                }
+
+                & > td:last-of-type {
+                    padding-right: 24px;
+                }
+
+                & > td:nth-child(3) {
+                    text-align: right;
+                }
+
+                & > td:nth-child(4) {
+                    text-align: right;
+                }
+
+                & > td:nth-child(5) {
+                    text-align: right;
+                }
+            }
+        }
     }
 }
