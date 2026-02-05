@@ -1,0 +1,75 @@
+.orders-history {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--color-border-tertiary);
+
+    & .rt-TableRootTable {
+        font-size: 14px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 13px;
+        }
+
+        & > .rt-TableHeader {
+            --table-row-background-color: white;
+
+            & > .rt-TableRow {
+                & > th {
+                    color: var(--color-text-tertiary);
+                    font-weight: 400;
+                    word-break: keep-all;
+                }
+
+                & > th:first-of-type {
+                    padding-left: 24px;
+                }
+
+                & > th:last-of-type {
+                    padding-right: 24px;
+                }
+
+                & > th:nth-child(3) {
+                    text-align: right;
+                }
+
+                & > th:nth-child(4) {
+                    text-align: right;
+                }
+
+                & > th:nth-child(5) {
+                    text-align: right;
+                }
+            }
+        }
+
+        & > .rt-TableBody {
+            & > .rt-TableRow {
+                color: var(--color-text-secondary);
+
+                & > th:first-of-type {
+                    padding-left: 24px;
+                }
+
+                & > td:last-of-type {
+                    padding-right: 24px;
+                }
+
+                & > td:nth-child(3) {
+                    text-align: right;
+                }
+
+                & > td:nth-child(4) {
+                    text-align: right;
+                }
+
+                & > td:nth-child(5) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

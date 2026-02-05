@@ -2,7 +2,16 @@ import { Box, Flex } from "@radix-ui/themes";
 import { Rss } from "lucide-react";
 import { LoginForm } from "@/app/(auth)/login/_components/LoginForm";
 
-export default function LoginPage() {
+interface Props {
+  searchParams: Promise<{
+    next?: string;
+  }>;
+}
+
+export default async function LoginPage({ searchParams }: Props) {
+  const sp = await searchParams;
+  const next = sp.next ?? "/exchange";
+
   return (
     <Flex justify={"center"} align={"center"} className={"min-h-screen"}>
       <Flex direction={"column"} justify={"center"} align={"center"} gap={"8"}>
@@ -31,7 +40,7 @@ export default function LoginPage() {
             "login-box mb-16 bg-surface-tertiary border border-border-tertiary rounded-[20px]"
           }
         >
-          <LoginForm />
+          <LoginForm next={next} />
         </Box>
       </Flex>
     </Flex>

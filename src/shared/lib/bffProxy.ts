@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
-import { ApiResponseUnit } from "@/shared/schemes/response/api-response";
-import { ACCESS_TOKEN_COOKIE } from "@/app/(auth)/_features/auth/cookies";
+import { ApiResponseUnit } from "@/shared/schemes/response/response-dto";
+import { ACCESS_TOKEN_COOKIE } from "@/app/_features/auth/cookies";
 
 export async function proxyApi<T>(
   path: string,
@@ -15,6 +15,7 @@ export async function proxyApi<T>(
 
   const res = await fetch(url, {
     ...init,
+    headers,
     cache: "no-store",
   });
 

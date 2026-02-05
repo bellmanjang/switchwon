@@ -1,5 +1,5 @@
-import { PageTitle } from "@/shared/ui/PageTitle";
-import { OrdersHistory } from "@/features/orders/ui/OrdersHistory";
+import { PageTitle } from "@/shared/components/PageTitle";
+import { OrdersHistory } from "@/app/(app)/orders/_components/OrdersHistory";
 import { Box, Flex } from "@radix-ui/themes";
 
 export default function OrdersPage() {

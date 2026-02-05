@@ -3,7 +3,7 @@ import { TokenResponse } from "@/shared/schemes/response/response-dto";
 import {
   ACCESS_TOKEN_COOKIE,
   accessCookieOptions,
-} from "@/app/(auth)/_features/auth/cookies";
+} from "@/app/_features/auth/cookies";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {

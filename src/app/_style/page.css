@@ -1,0 +1,35 @@
+.page-wrapper {
+    padding: 40px 80px 50px 80px;
+
+    @media screen and (max-width: 767px) {
+        padding: 8px 20px 10px 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 12px 30px 15px 30px;
+    }
+}
+
+.page-subtitle {
+    font-size: 20px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 16px;
+    }
+}
+
+.card {
+    padding: 24px 32px;
+
+    @media screen and (max-width: 767px) {
+        padding: 12px 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        padding: 18px 24px;
+    }
+}

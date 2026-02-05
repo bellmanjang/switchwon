@@ -1,0 +1,101 @@
+.exchange-page-content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . exchange exchange"
+    "wallets wallets exchange exchange";
+    gap: 24px;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+      ". ."
+      "wallets wallets"
+      "exchange exchange";
+        gap: 8px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        gap: 16px;
+    }
+}
+
+.rate-card {
+    min-height: 140px;
+}
+
+.rate-change-icon {
+    scale: 2;
+
+    @media screen and (max-width: 767px) {
+        scale: 1.5;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        scale: 1.75;
+    }
+}
+
+.exchange-mode-seg {
+    gap: 4px;
+    padding: 8px;
+    border-radius: 12px;
+    background: white;
+
+    height: 80px;
+
+    @media screen and (max-width: 767px) {
+        height: 56px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        height: 68px;
+    }
+}
+
+.exchange-mode-seg .rt-SegmentedControlItem[data-state="on"] {
+    color: white;
+}
+
+.exchange-mode-seg .rt-SegmentedControlItem[data-state="off"]:hover {
+    background-color: var(--color-surface-tertiary);
+}
+
+.exchange-mode-seg .rt-SegmentedControlIndicator::before {
+    border-radius: 8px;
+}
+
+.seg-buy-item .rt-SegmentedControlItemLabelInactive {
+    color: var(--color-buy-disabled);
+}
+
+.seg-sell-item .rt-SegmentedControlItemLabelInactive {
+    color: var(--color-sell-disabled);
+}
+
+.seg-buy .rt-SegmentedControlIndicator::before {
+    margin: 8px 4px 8px 8px;
+    background-color: var(--color-buy);
+}
+
+.seg-sell .rt-SegmentedControlIndicator::before {
+    margin: 8px 8px 8px 4px;
+    background-color: var(--color-sell);
+}
+
+.currency-dropdown-content .rt-DropdownMenuViewport {
+    padding: 8px 0;
+}
+
+.currency-dropdown-item {
+    width: 140px;
+    height: 44px;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+
+.currency-dropdown-item[data-highlighted] {
+    background-color: var(--color-surface-tertiary);
+}

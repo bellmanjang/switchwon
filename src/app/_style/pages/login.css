@@ -1,0 +1,29 @@
+.login-page-logo {
+    width: 64px;
+    height: 64px;
+
+    @media screen and (max-width: 767px) {
+        width: 32px;
+        height: 32px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.login-box {
+    width: 560px;
+    padding: 24px 32px;
+
+    @media screen and (max-width: 767px) {
+        width: 280px;
+        padding: 12px 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 420px;
+        padding: 18px 24px;
+    }
+}

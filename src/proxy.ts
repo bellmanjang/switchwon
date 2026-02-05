@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { ACCESS_TOKEN_COOKIE } from "@/app/(auth)/_features/auth/cookies";
+import { ACCESS_TOKEN_COOKIE } from "@/app/_features/auth/cookies";
 
 export function proxy(req: NextRequest) {
   const { pathname, searchParams } = req.nextUrl;
@@ -21,5 +21,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/exchange", "/orders"],
+  matcher: ["/exchange/:path*", "/orders/:path*"],
 };

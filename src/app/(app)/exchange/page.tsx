@@ -1,10 +1,17 @@
-import { ExchangeRateCard } from "@/features/exchange/ui/ExchangeReteCard";
-import { WalletCard } from "@/features/exchange/ui/WalletCard";
-import { ExchangeFormCard } from "@/features/exchange/ui/ExchangeFormCard";
-import { PageTitle } from "@/shared/ui/PageTitle";
+"use client";
+
+import { WalletCard } from "@/app/(app)/exchange/_components/wallets/WalletCard";
+import { ExchangeFormCard } from "@/app/(app)/exchange/_components/exchange/ExchangeFormCard";
+import { PageTitle } from "@/shared/components/PageTitle";
 import { Flex } from "@radix-ui/themes";
+import { RateCardGroup } from "@/app/(app)/exchange/_components/rates/RateCardGroup";
+import { useLatestExchangeRates } from "@/app/_features/exchange/useLatestExchangeRates";
+import { useInitiateWallets } from "@/app/_features/wallets/useInitiateWallets";
 
 export default function ExchangePage() {
+  useLatestExchangeRates();
+  useInitiateWallets();
+
   return (
     <Flex direction={"column"} gap={"5"} className={"page-wrapper w-full"}>
       <PageTitle
@@ -13,26 +20,9 @@ export default function ExchangePage() {
       />
 
       <div className={"exchange-page-content w-full h-full"}>
-        <ExchangeRateCard
-          currency={"USD"}
-          rate={1320.5}
-          changePercentage={0.5}
-          diffTone={"up"}
-        />
-        <ExchangeRateCard
-          currency={"JPY"}
-          rate={9.85}
-          changePercentage={-1.1}
-          diffTone={"down"}
-        />
-        <WalletCard
-          balances={[
-            { currency: "KRW", amountText: "₩ 1,200,000" },
-            { currency: "USD", amountText: "$ 50.00" },
-            { currency: "JPY", amountText: "¥ 150,000" },
-          ]}
-          totalText={"₩ 3,000,000"}
-        />
+        <RateCardGroup />
+
+        <WalletCard />
 
         <ExchangeFormCard />
       </div>

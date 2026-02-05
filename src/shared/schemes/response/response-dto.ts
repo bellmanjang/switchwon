@@ -1,6 +1,21 @@
 import type { CurrencyCode } from "@/shared/schemes/types";
 
 /**
+ * ApiResponseUnit
+ * API 응답 DTO
+ */
+export type ApiResponseUnit<T> = {
+  /** 응답 코드 Example="OK" */
+  code: string;
+
+  /** 응답 메시지 Example="정상적으로 처리되었습니다." */
+  message: string;
+
+  /** 응답 데이터 */
+  data?: T;
+};
+
+/**
  * TokenResponse
  * 인증 토큰 응답 DTO
  */
@@ -16,7 +31,7 @@ export type TokenResponse = {
  * WalletResponse
  * 지갑 응답 DTO
  */
-export type WalletResponse = {
+type WalletResponse = {
   /** 지갑 ID (int64) Example=1 */
   walletId: number;
 

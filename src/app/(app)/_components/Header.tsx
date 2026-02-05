@@ -1,7 +1,7 @@
 import { Flex } from "@radix-ui/themes";
 import { Rss } from "lucide-react";
-import { LogoutButton } from "@/shared/ui/buttons/LogoutButton";
-import { RouteButton } from "@/shared/ui/buttons/RouteButton";
+import { LogoutButton } from "@/shared/components/buttons/LogoutButton";
+import { RouteButton } from "@/shared/components/buttons/RouteButton";
 
 export const Header = () => {
   return (

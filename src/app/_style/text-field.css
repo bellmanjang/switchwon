@@ -1,0 +1,112 @@
+.rt-TextFieldRoot.custom {
+    background: white;
+
+    &.custom-size-4 {
+        height: 48px;
+
+        @media screen and (max-width: 767px) {
+            height: 36px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 42px;
+        }
+
+        & > input {
+            font-size: 16px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 12px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &.custom-size-5 {
+        height: 56px;
+
+        @media screen and (max-width: 767px) {
+            height: 40px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 48px;
+        }
+
+        & > input {
+            font-size: 20px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &.custom-size-6 {
+        height: 64px;
+
+        @media screen and (max-width: 767px) {
+            height: 44px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 54px;
+        }
+
+        & > input {
+            font-size: 20px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &.custom-size-7 {
+        height: 72px;
+
+        @media screen and (max-width: 767px) {
+            height: 48px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            height: 60px;
+        }
+
+        & > input {
+            font-size: 20px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    & > input {
+        color: var(--color-text-tertiary);
+        font-weight: 600; /* semi-bold */
+
+        &::placeholder {
+            color: var(--color-text-tertiary);
+        }
+    }
+}
+
+.rt-TextFieldRoot.align-right > input {
+    text-align: right;
+}
