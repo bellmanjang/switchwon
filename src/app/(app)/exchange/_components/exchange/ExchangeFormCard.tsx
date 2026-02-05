@@ -85,7 +85,7 @@ export function ExchangeFormCard() {
             />
           </Flex>
 
-          <Flex direction={"column"} gap={"1"} className={"w-full"}>
+          <Flex direction={"column"} gap={"2"} className={"w-full"}>
             <h4 className={"font-medium text-text-tertiary"}>
               {mode === "BUY" ? "필요" : "받을"} 원화
             </h4>
@@ -94,17 +94,29 @@ export function ExchangeFormCard() {
                 "rt-Button custom custom-size-7 bg-surface-secondary border border-border-secondary rounded-lg"
               }
             >
-              <Flex justify={"end"} align={"center"} className={"h-full"}>
-                <h4 className={"px-6 font-semibold text-text-tertiary"}>
-                  {formatNumberToString(quoteResult?.krwAmount ?? 0, {
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 3,
-                  })}{" "}
-                  <span
-                    className={clsx(mode === "BUY" ? "text-buy" : "text-sell")}
-                  >
-                    원 {mode === "BUY" ? "필요해요" : "받을 수 있어요"}
-                  </span>
+              <Flex
+                justify={"end"}
+                align={"center"}
+                gap={"1"}
+                className={"h-full px-6"}
+              >
+                {quoteResult ? (
+                  <h4 className={"font-semibold text-text-tertiary"}>
+                    {formatNumberToString(quoteResult.krwAmount ?? 0, {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 3,
+                    })}
+                  </h4>
+                ) : (
+                  <Skeleton width={"60px"} height={"24px"} />
+                )}
+                <h4
+                  className={clsx(
+                    "font-semibold",
+                    mode === "BUY" ? "text-buy" : "text-sell",
+                  )}
+                >
+                  원 {mode === "BUY" ? "필요해요" : "받을 수 있어요"}
                 </h4>
               </Flex>
             </Box>
@@ -115,14 +127,14 @@ export function ExchangeFormCard() {
       <Separator size={"4"} className={"!bg-border-secondary"} />
 
       <Flex direction={"column"} gap={"4"}>
-        <Flex justify={"between"} className={"my-1"}>
+        <Flex justify={"between"}>
           <h4 className={"font-medium text-text-tertiary"}>적용 환율</h4>
           {quoteResult ? (
             <h4 className={"font-semibold text-text-tertiary"}>
               1 {toCurrency} = {quoteResult.appliedRate} 원
             </h4>
           ) : (
-            <Skeleton width={"120px"} height={"24px"} />
+            <Skeleton width={"180px"} height={"24px"} />
           )}
         </Flex>
         <Button

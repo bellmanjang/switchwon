@@ -7,7 +7,6 @@ import {
 } from "@/app/_shared/schemes/response/response-dto";
 
 export const useOrderQuote = () => {
-  const mode = useExchangeStore((state) => state.exchangeMode);
   const toCurrency = useExchangeStore((state) => state.toCurrency);
   const amount = useExchangeStore((state) => state.forexAmount);
 
@@ -61,12 +60,12 @@ export const useOrderQuote = () => {
     }, 300);
 
     return () => window.clearTimeout(timerRef.current);
-  }, [amount, toCurrency, mode, fetchQuote]);
+  }, [amount, toCurrency, fetchQuote]);
 
   const refetch = useCallback(async () => {
     window.clearTimeout(timerRef.current);
     return await fetchQuote();
   }, [fetchQuote]);
 
-  return { quoteResult, isFetching, reQuote : refetch };
+  return { quoteResult, isFetching, reQuote: refetch };
 };
