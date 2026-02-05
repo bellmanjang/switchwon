@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { OrderResponse } from "@/shared/schemes/response/response-dto";
+import { OrderResponse } from "@/app/_shared/schemes/response/response-dto";
 import { orderApi } from "@/app/_features/orders/order-api";
 
 interface OrderState {

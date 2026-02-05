@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Table } from "@radix-ui/themes";
-import { formatNumberToString } from "@/shared/utils/format-util";
+import { formatNumberToString } from "@/app/_shared/utils/format-util";
 import { useOrderStore } from "@/app/_features/orders/useOrderStore";
 import { useEffect } from "react";
 

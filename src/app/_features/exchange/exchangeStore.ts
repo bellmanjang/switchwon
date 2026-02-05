@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { ExchangeRateResponse } from "@/shared/schemes/response/response-dto";
-import { CurrencyCode, ExchangeMode } from "@/shared/schemes/types";
+import { ExchangeRateResponse } from "@/app/_shared/schemes/response/response-dto";
+import { CurrencyCode, ExchangeMode } from "@/app/_shared/schemes/types";
 import { exchangeRateApi } from "@/app/_features/exchange/exchange-rate-api";
 
 interface ExchangeState {

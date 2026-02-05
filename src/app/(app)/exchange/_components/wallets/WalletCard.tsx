@@ -1,7 +1,7 @@
 import { Flex, Separator } from "@radix-ui/themes";
 import { useWalletStore } from "@/app/_features/wallets/walletStore";
-import { formatNumberToString } from "@/shared/utils/format-util";
-import { CURRENCY_META } from "@/shared/schemes/types";
+import { formatNumberToString } from "@/app/_shared/utils/format-util";
+import { CURRENCY_META } from "@/app/_shared/schemes/types";
 
 export function WalletCard() {
   const wallets = useWalletStore((state) => state.wallets);

@@ -1,6 +1,6 @@
 import { Flex, Skeleton } from "@radix-ui/themes";
 import clsx from "clsx";
-import { CURRENCY_META } from "@/shared/schemes/types";
+import { CURRENCY_META } from "@/app/_shared/schemes/types";
 
 export function RateCardSkeleton() {
   return (

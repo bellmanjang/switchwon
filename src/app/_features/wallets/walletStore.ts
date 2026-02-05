@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { WalletSummaryResponse } from "@/shared/schemes/response/response-dto";
+import { WalletSummaryResponse } from "@/app/_shared/schemes/response/response-dto";
 import { walletApi } from "@/app/_features/wallets/wallet-api";
 
 interface WalletState {

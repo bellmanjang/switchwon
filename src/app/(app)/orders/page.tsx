@@ -1,4 +1,4 @@
-import { PageTitle } from "@/shared/components/PageTitle";
+import { PageTitle } from "@/app/_shared/components/PageTitle";
 import { OrdersHistory } from "@/app/(app)/orders/_components/OrdersHistory";
 import { Box, Flex } from "@radix-ui/themes";
 

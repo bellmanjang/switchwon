@@ -3,13 +3,13 @@
 import { Box, Button, Flex, Separator, Skeleton } from "@radix-ui/themes";
 import { CurrencyDropdown } from "@/app/(app)/exchange/_components/exchange/CurrencyDropdown";
 import { ModeSegmentedControl } from "@/app/(app)/exchange/_components/exchange/ModeSegmentedControl";
-import { TextInput } from "@/shared/components/input/TextInput";
-import { formatNumberToString } from "@/shared/utils/format-util";
+import { TextInput } from "@/app/_shared/components/input/TextInput";
+import { formatNumberToString } from "@/app/_shared/utils/format-util";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
 import { useExchangeStore } from "@/app/_features/exchange/exchangeStore";
 import { useOrderQuote } from "@/app/_features/orders/useOrderQuote";
-import { CURRENCY_META } from "@/shared/schemes/types";
+import { CURRENCY_META } from "@/app/_shared/schemes/types";
 import { orderApi } from "@/app/_features/orders/order-api";
 import { useWalletStore } from "@/app/_features/wallets/walletStore";
 import { useToastStore } from "@/app/_features/toast/store/toastStore";

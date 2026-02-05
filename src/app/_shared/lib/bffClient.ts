@@ -1,4 +1,4 @@
-import { ApiResponseUnit } from "@/shared/schemes/response/response-dto";
+import { ApiResponseUnit } from "@/app/_shared/schemes/response/response-dto";
 
 export async function bff<T>(
   path: string,

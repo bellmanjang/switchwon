@@ -1,5 +1,5 @@
-import { proxyApi } from "@/shared/lib/bffProxy";
-import { TokenResponse } from "@/shared/schemes/response/response-dto";
+import { proxyApi } from "@/app/_shared/lib/bffProxy";
+import { TokenResponse } from "@/app/_shared/schemes/response/response-dto";
 import {
   ACCESS_TOKEN_COOKIE,
   accessCookieOptions,

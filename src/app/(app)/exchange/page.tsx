@@ -2,7 +2,7 @@
 
 import { WalletCard } from "@/app/(app)/exchange/_components/wallets/WalletCard";
 import { ExchangeFormCard } from "@/app/(app)/exchange/_components/exchange/ExchangeFormCard";
-import { PageTitle } from "@/shared/components/PageTitle";
+import { PageTitle } from "@/app/_shared/components/PageTitle";
 import { Flex } from "@radix-ui/themes";
 import { RateCardGroup } from "@/app/(app)/exchange/_components/rates/RateCardGroup";
 import { useLatestExchangeRates } from "@/app/_features/exchange/useLatestExchangeRates";

@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { ApiResponseUnit } from "@/shared/schemes/response/response-dto";
+import { ApiResponseUnit } from "@/app/_shared/schemes/response/response-dto";
 import { ACCESS_TOKEN_COOKIE } from "@/app/_features/auth/cookies";
 
 export async function proxyApi<T>(

@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Theme } from "@radix-ui/themes";
+import Toaster from "@/app/_features/toast/components/Toaster";
 
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   return (
@@ -11,6 +12,7 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
       radius={"large"}
     >
       {children}
+      <Toaster />
     </Theme>
   );
 };

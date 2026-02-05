@@ -1,6 +1,6 @@
-import type { LoginRequest } from "@/shared/schemes/request/request-dto";
-import { bff } from "@/shared/lib/bffClient";
-import { TokenResponse } from "@/shared/schemes/response/response-dto";
+import type { LoginRequest } from "@/app/_shared/schemes/request/request-dto";
+import { bff } from "@/app/_shared/lib/bffClient";
+import { TokenResponse } from "@/app/_shared/schemes/response/response-dto";
 
 export const authApi = {
   login: (req: LoginRequest) =>

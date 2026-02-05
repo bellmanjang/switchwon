@@ -2,7 +2,7 @@
 
 import { DropdownMenu, Text } from "@radix-ui/themes";
 import { CurrencyFlagIcon } from "@/app/(app)/exchange/_components/exchange/CurrencyFlagIcon";
-import { CURRENCY_META } from "@/shared/schemes/types";
+import { CURRENCY_META } from "@/app/_shared/schemes/types";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";

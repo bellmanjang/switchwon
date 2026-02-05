@@ -1,7 +1,7 @@
 import { Flex } from "@radix-ui/themes";
-import type { ExchangeRateResponse } from "@/shared/schemes/response/response-dto";
-import { CURRENCY_META } from "@/shared/schemes/types";
-import { formatNumberToString } from "@/shared/utils/format-util";
+import type { ExchangeRateResponse } from "@/app/_shared/schemes/response/response-dto";
+import { CURRENCY_META } from "@/app/_shared/schemes/types";
+import { formatNumberToString } from "@/app/_shared/utils/format-util";
 import { ChangePercentageIcon } from "@/app/(app)/exchange/_components/rates/ChangePercentageIcon";
 import clsx from "clsx";
 import { changePercentageColor } from "@/app/_features/exchange/rate-util";

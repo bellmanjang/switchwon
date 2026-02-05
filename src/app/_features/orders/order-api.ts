@@ -1,12 +1,12 @@
-import { bff } from "@/shared/lib/bffClient";
+import { bff } from "@/app/_shared/lib/bffClient";
 import {
   OrderQuoteResponse,
   OrderResponse,
-} from "@/shared/schemes/response/response-dto";
+} from "@/app/_shared/schemes/response/response-dto";
 import {
   OrderQuoteRequest,
   OrderRequest,
-} from "@/shared/schemes/request/request-dto";
+} from "@/app/_shared/schemes/request/request-dto";
 
 export const orderApi = {
   history: () =>

@@ -1,6 +1,6 @@
 "use client";
 
-import { TextInput } from "@/shared/components/input/TextInput";
+import { TextInput } from "@/app/_shared/components/input/TextInput";
 import { useState } from "react";
 import { Button, Flex } from "@radix-ui/themes";
 import { authApi } from "@/app/_features/auth/auth-api";

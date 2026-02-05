@@ -1,5 +1,5 @@
-import { bff } from "@/shared/lib/bffClient";
-import { ExchangeRateResponse } from "@/shared/schemes/response/response-dto";
+import { bff } from "@/app/_shared/lib/bffClient";
+import { ExchangeRateResponse } from "@/app/_shared/schemes/response/response-dto";
 
 export const exchangeRateApi = {
   latest: () =>

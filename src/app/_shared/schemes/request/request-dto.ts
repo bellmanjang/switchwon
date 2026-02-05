@@ -1,4 +1,4 @@
-import type { CurrencyCode } from "@/shared/schemes/types";
+import type { CurrencyCode } from "@/app/_shared/schemes/types";
 
 /**
  * OrderRequest

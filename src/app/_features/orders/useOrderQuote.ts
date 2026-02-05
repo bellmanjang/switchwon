@@ -4,7 +4,7 @@ import { useExchangeStore } from "@/app/_features/exchange/exchangeStore";
 import {
   ApiResponseUnit,
   OrderQuoteResponse,
-} from "@/shared/schemes/response/response-dto";
+} from "@/app/_shared/schemes/response/response-dto";
 
 export const useOrderQuote = () => {
   const mode = useExchangeStore((state) => state.exchangeMode);

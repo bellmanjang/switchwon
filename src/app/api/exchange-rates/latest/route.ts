@@ -1,5 +1,5 @@
-import { proxyApi } from "@/shared/lib/bffProxy";
-import { ExchangeRateResponse } from "@/shared/schemes/response/response-dto";
+import { proxyApi } from "@/app/_shared/lib/bffProxy";
+import { ExchangeRateResponse } from "@/app/_shared/schemes/response/response-dto";
 import { NextResponse } from "next/server";
 
 export async function GET() {
